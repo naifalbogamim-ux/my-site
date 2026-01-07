@@ -13,6 +13,39 @@
   <!-- Professional Service Schema (صالح 100%) -->
 
   <style>
+  
+  <details class="faq">
+    <summary>هل لازم أدفع لقوقل عشان يطلع موقعي؟</summary>
+    <div class="faq-a">
+      لا. الظهور العضوي مجاني. الدفع يكون فقط إذا تبغى إعلانات Google Ads (اختياري).
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>وش تشمل باقاتكم؟</summary>
+    <div class="faq-a">
+      <ul>
+        <li><b>صفحة واحدة 499:</b> صفحة هبوط جاهزة + زر واتساب + أساسيات SEO.</li>
+        <li><b>الاحترافي 999:</b> تصميم أقوى + أقسام إضافية + تحسين محتوى/عناوين + FAQ.</li>
+        <li><b>المتكامل 1999:</b> كل شيء + تحسينات تقنية أكثر + إعدادات SEO كاملة + متابعة.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>كم مدة التسليم؟</summary>
+    <div class="faq-a">
+      حسب المحتوى والتعديلات، غالبًا من 1 إلى 5 أيام للموقع التعريفي.
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>كيف أطلب؟</summary>
+    <div class="faq-a">
+      اضغط زر “اطلب الآن” واكتب اسمك والباقه المطلوبة، وبنرد عليك مباشرة.
+    </div>
+  </details>
+</section>
     body {
       margin: 0;
       font-family: Tahoma, Arial;
@@ -59,10 +92,113 @@
       padding: 20px;
     }
   </style>
+  <style>
+  .section{padding:24px 16px; max-width:980px; margin:auto}
+  #faq h2{margin:0 0 14px}
+  .faq{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:12px 14px; margin:10px 0}
+  .faq summary{cursor:pointer; font-weight:800}
+  .faq-a{margin-top:10px; line-height:1.9; opacity:.95}
+  .faq-a ul{margin:10px 0 0; padding:0 18px}
+</style>
 </head>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "وش الفرق بين تصميم موقع وتحسين محركات البحث (SEO)؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "تصميم الموقع يعني شكل وتجربة المستخدم والصفحات. SEO يعني تهيئة الموقع عشان يظهر في Google بكلمات بحث مناسبة ويجيب زيارات."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "متى يطلع موقعي في قوقل بعد ما ينرفع؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "غالبًا خلال أيام إلى أسابيع حسب سرعة الأرشفة. نساعدك بتفعيل Search Console وإرسال خريطة الموقع وطلب الفهرسة للصفحة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل لازم أدفع لقوقل عشان يطلع موقعي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "لا. الظهور العضوي مجاني. الدفع يكون فقط إذا تبغى إعلانات Google Ads (اختياري)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "وش تشمل باقاتكم؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "صفحة واحدة 499: صفحة هبوط + زر واتساب + أساسيات SEO. الاحترافي 999: تصميم أقوى + أقسام إضافية + تحسين محتوى/عناوين + FAQ. المتكامل 1999: كل شيء + تحسينات تقنية أكثر + إعدادات SEO كاملة + متابعة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كم مدة التسليم؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "حسب المحتوى والتعديلات، غالبًا من 1 إلى 5 أيام للموقع التعريفي."
+      }
+    }
+  ]
+}
+</script>
 <body>
+<section id="faq" class="section">
+  <h2>الأسئلة الشائعة</h2>
 
+  <details class="faq">
+    <summary>وش الفرق بين تصميم موقع وتحسين محركات البحث (SEO)؟</summary>
+    <div class="faq-a">
+      تصميم الموقع يعني شكل وتجربة المستخدم والصفحات. SEO يعني تهيئة الموقع عشان يظهر في Google بكلمات بحث مناسبة ويجيب زيارات.
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>متى يطلع موقعي في قوقل بعد ما ينرفع؟</summary>
+    <div class="faq-a">
+      غالبًا خلال أيام إلى أسابيع حسب سرعة الأرشفة. نساعدك بتفعيل Search Console وإرسال خريطة الموقع وطلب الفهرسة للصفحة.
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>هل لازم أدفع لقوقل عشان يطلع موقعي؟</summary>
+    <div class="faq-a">
+      لا. الظهور العضوي مجاني. الدفع يكون فقط إذا تبغى إعلانات Google Ads (اختياري).
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>وش تشمل باقاتكم؟</summary>
+    <div class="faq-a">
+      <ul>
+        <li><b>صفحة واحدة 499:</b> صفحة هبوط جاهزة + زر واتساب + أساسيات SEO.</li>
+        <li><b>الاحترافي 999:</b> تصميم أقوى + أقسام إضافية + تحسين محتوى/عناوين + FAQ.</li>
+        <li><b>المتكامل 1999:</b> كل شيء + تحسينات تقنية أكثر + إعدادات SEO كاملة + متابعة.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>كم مدة التسليم؟</summary>
+    <div class="faq-a">
+      حسب المحتوى والتعديلات، غالبًا من 1 إلى 5 أيام للموقع التعريفي.
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>كيف أطلب؟</summary>
+    <div class="faq-a">
+      اضغط زر “اطلب الآن” واكتب اسمك والباقه المطلوبة، وبنرد عليك مباشرة.
+    </div>
+  </details>
+</section>
 <header>
   <h1>تصميم مواقع و SEO</h1>
   <p>نرفع موقعك في Google ونجيب لك عملاء حقيقيين</p>
@@ -102,4 +238,5 @@
 
 </body>
 </html>
+
 
