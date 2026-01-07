@@ -1,216 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>تصميم مواقع و SEO | نايف</title>
-  <meta name="description" content="تصميم مواقع احترافية وتحسين محركات البحث SEO لزيادة الظهور في قوقل وجلب عملاء. باقات ملفتة وأسعار تنافسية.">
-  <meta name="google-site-verification" content="J6hWTnEP9oWQkW9f8DZyIavrdlWkbdWuBpjYXuu_vz8" />
-  <link rel="canonical" href="https://naifalbogamim-ux.github.io/my-site/"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- ألوان داكنة فخمة -->
-  <style>
-    :root{
-      --bg:#0b0f1a;
-      --panel:#0f1629;
-      --line:rgba(255,255,255,.08);
-      --text:#e9ecff;
-      --muted:#aab1ff;
-      --accent:#6c7cff;
-      --accent2:#22c55e;
-      --gold:#f6c177;
-      --shadow:0 20px 60px rgba(0,0,0,.45);
-      --r:18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--text);
-      background:
-        radial-gradient(900px 500px at 80% -10%, rgba(108,124,255,.25), transparent 60%),
-        radial-gradient(700px 400px at 10% 10%, rgba(246,193,119,.18), transparent 55%),
-        var(--bg);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:auto;padding:0 18px}
-    /* هيدر متحرك */
-    .top{
-      position:sticky;top:0;z-index:30;
-      backdrop-filter:blur(10px);
-      background:rgba(11,15,26,.75);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:900}
-    .logo{
-      width:38px;height:38px;border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),#7c3aed);
-      animation:pulse 3s infinite;
-      box-shadow:0 0 0 0 rgba(108,124,255,.6);
-    }
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(108,124,255,.5)}
-      70%{box-shadow:0 0 0 18px rgba(108,124,255,0)}
-      100%{box-shadow:0 0 0 0 rgba(108,124,255,0)}
-    }
-    .links{display:flex;gap:14px;flex-wrap:wrap}
-    .links a{color:var(--muted);padding:8px 10px;border-radius:12px}
-    .links a:hover{background:rgba(255,255,255,.06);color:#fff}
-    .btn{padding:12px 16px;border-radius:14px;border:1px solid var(--line);font-weight:900}
-    .btn.primary{background:linear-gradient(135deg,var(--accent),#2563eb);border-color:transparent}
-    .btn.whats{background:linear-gradient(135deg,var(--accent2),#16a34a);border-color:transparent}
+<title>تصميم مواقع وتحسين محركات البحث SEO | نايف</title>
+<meta name="description" content="تصميم مواقع احترافية وتحسين محركات البحث SEO لرفع ظهورك في قوقل وزيادة العملاء. باقات 499 – 999 – 1999 ريال.">
+<link rel="canonical" href="https://naifalbogamim-ux.github.io/my-site/">
 
-    /* بطل الصفحة */
-    .hero{padding:56px 0 26px}
-    .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
-    .panel{
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      box-shadow:var(--shadow);
-      padding:22px;
-    }
-    h1{margin:0 0 10px;font-size:36px}
-    p{margin:0;color:var(--muted)}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .badge{border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:13px}
-    .cta{display:flex;gap:10px;margin-top:18px}
+<!-- Schema SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "نايف - تصميم مواقع وتحسين محركات البحث",
+  "description": "تصميم مواقع احترافية وتحسين محركات البحث SEO",
+  "url": "https://naifalbogamim-ux.github.io/my-site/",
+  "telephone": "+966507183296",
+  "areaServed": "SA",
+  "priceRange": "SAR 499 - 1999"
+}
+</script>
 
-    /* كروت */
-    section{padding:26px 0}
-    h2{margin:0 0 8px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-    .card:hover{transform:translateY(-4px);transition:.25s}
-
-    /* خطوات */
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .step{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-    .num{width:34px;height:34px;border-radius:12px;background:rgba(108,124,255,.18);display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:8px}
-
-    /* أسعار ملفتة */
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .price{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--r);padding:18px;position:relative}
-    .featured{border-color:rgba(246,193,119,.6);box-shadow:0 22px 70px rgba(246,193,119,.25)}
-    .tag{position:absolute;top:12px;left:12px;background:rgba(246,193,119,.2);border:1px solid rgba(246,193,119,.5);padding:6px 10px;border-radius:999px}
-    .money{font-size:34px;font-weight:900}
-    .money small{font-size:13px;color:var(--muted)}
-    .price ul{padding-right:18px;color:var(--muted)}
-    .price li{margin:8px 0}
-
-    /* أسئلة */
-    .faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    details{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--r);padding:14px}
-
-    /* واتساب ثابت */
-    .whatsFloat{
-      position:fixed;left:18px;bottom:18px;z-index:50;
-      background:linear-gradient(135deg,var(--accent2),#16a34a);
-      color:#fff;font-weight:900;padding:14px 18px;border-radius:999px;
-      box-shadow:0 18px 40px rgba(0,0,0,.45)
-    }
-
-    footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);text-align:center}
-    @media(max-width:900px){
-      .heroGrid,.cards,.pricing{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr 1fr}
-      .faq{grid-template-columns:1fr}
-      h1{font-size:28px}
-    }
-  </style>
+<style>
+body{
+margin:0;
+font-family:Tahom,a Arial;
+background:#0b0f1a;
+color:#fff;
+overflow-x:hidden
+}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+background:
+radial-gradient(circle at top right, rgba(124,77,255,.35), transparent 40%),
+radial-gradient(circle at bottom left, rgba(0,229,255,.35), transparent 40%)
+}
+h1{
+font-size:clamp(32px,5vw,54px);
+line-height:1.4
+}
+h1 span{color:#00e5ff}
+p{color:#b0b3c7;font-size:18px;line-height:1.9}
+.btn{
+display:inline-block;
+padding:14px 26px;
+margin:10px;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+background:linear-gradient(135deg,#00e5ff,#7c4dff);
+color:#000
+}
+.section{padding:80px 20px;text-align:center}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto
+}
+.card{
+background:#12172a;
+padding:30px;
+border-radius:18px
+}
+.price{font-size:32px;font-weight:bold;color:#00e5ff;margin:15px 0}
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+color:#fff
+}
+</style>
 </head>
 
 <body>
-  <div class="top">
-    <div class="wrap nav">
-      <div class="brand"><div class="logo"></div> نايف</div>
-      <div class="links">
-        <a href="#services">الخدمات</a>
-        <a href="#prices">الأسعار</a>
-        <a href="#work">طريقة العمل</a>
-        <a href="#faq">الأسئلة</a>
-      </div>
-      <a class="btn whats" href="https://wa.me/966507183296?text=مرحبا%20ابي%20تصميم%20موقع%20او%20SEO" target="_blank">واتساب</a>
-    </div>
-  </div>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="heroGrid">
-        <div class="panel">
-          <h1>تصميم مواقع فخم + SEO يطلعك قوقل</h1>
-          <p>نجهّز صفحة تبيع + تحسين محركات البحث عشان تجيك عملاء حقيقيين.</p>
-          <div class="badges">
-            <span class="badge">سرعة</span><span class="badge">تجربة مستخدم</span>
-            <span class="badge">SEO تقني</span><span class="badge">تقارير</span>
-          </div>
-          <div class="cta">
-            <a class="btn primary" href="#prices">شوف الباقات</a>
-            <a class="btn" href="#services">الخدمات</a>
-          </div>
-        </div>
-        <div class="panel">
-          <h2>ليش تختارني؟</h2>
-          <p>شغل نظيف، شكل يبيع، وخطة SEO واضحة بدون لف.</p>
-        </div>
-      </div>
-    </section>
+<section class="hero">
+<div>
+<h1>
+تصميم مواقع احترافية<br>
+<span>وتحسين محركات البحث SEO</span><br>
+لزيادة العملاء ورفع ظهورك في قوقل
+</h1>
 
-    <section id="services">
-      <h2>الخدمات</h2>
-      <div class="cards">
-        <div class="card"><h3>تصميم مواقع</h3><p>واجهات فخمة، متجاوبة، وسريعة.</p></div>
-        <div class="card"><h3>تحسين محركات البحث</h3><p>عناوين، محتوى، وسرعة.</p></div>
-        <div class="card"><h3>تهيئة قوقل</h3><p>Search Console وقياس.</p></div>
-      </div>
-    </section>
+<p>
+أقدّم تصميم مواقع احترافية مع تحسين محركات البحث (SEO)
+لمساعدتك على الظهور في نتائج Google الأولى
+وتحويل الزوار إلى عملاء فعليين.
+</p>
 
-    <section id="work">
-      <h2>طريقة العمل</h2>
-      <div class="steps">
-        <div class="step"><div class="num">1</div>تحليل</div>
-        <div class="step"><div class="num">2</div>تصميم</div>
-        <div class="step"><div class="num">3</div>SEO</div>
-        <div class="step"><div class="num">4</div>نتائج</div>
-      </div>
-    </section>
+<a href="#prices" class="btn">شوف الباقات</a>
+<a href="https://wa.me/966507183296" class="btn">تواصل واتساب</a>
+</div>
+</section>
 
-    <section id="prices">
-      <h2>الأسعار</h2>
-      <div class="pricing">
-        <div class="price">
-          <h3>بداية</h3>
-          <div class="money">499 <small>ريال</small></div>
-          <ul><li>صفحة واحدة</li><li>SEO أساسي</li></ul>
-        </div>
-        <div class="price featured">
-          <span class="tag">الأكثر طلبًا</span>
-          <h3>احترافي</h3>
-          <div class="money">1,299 <small>ريال</small></div>
-          <ul><li>تصميم فخم</li><li>SEO كامل</li><li>زر واتساب</li></ul>
-        </div>
-        <div class="price">
-          <h3>متكامل</h3>
-          <div class="money">2,499 <small>ريال</small></div>
-          <ul><li>عدة صفحات</li><li>SEO متقدم</li><li>تقارير</li></ul>
-        </div>
-      </div>
-    </section>
+<section class="section">
+<h2>خدماتي</h2>
+<div class="cards">
+<div class="card">
+<h3>تصميم مواقع</h3>
+<p>مواقع سريعة، جذابة ومتجاوبة مع الجوال.</p>
+</div>
+<div class="card">
+<h3>تحسين محركات البحث SEO</h3>
+<p>تهيئة كاملة لرفع ترتيب موقعك في قوقل.</p>
+</div>
+<div class="card">
+<h3>تحويل الزوار لعملاء</h3>
+<p>تصميم موجه للبيع مع زر واتساب مباشر.</p>
+</div>
+</div>
+</section>
 
-    <section id="faq">
-      <h2>أسئلة شائعة</h2>
-      <div class="faq">
-        <details><summary>متى تظهر النتائج؟</summary><p>من 4–8 أسابيع حسب المنافسة.</p></details>
-        <details><summary>هل فيه تقارير؟</summary><p>نعم حسب الباقة.</p></details>
-      </div>
-    </section>
-  </main>
+<section class="section">
+<h2>تحسين محركات البحث SEO</h2>
+<p>
+تحسين محركات البحث يساعد موقعك على الظهور عند البحث عن
+<strong>تصميم مواقع</strong> أو <strong>تصميم موقع شركة</strong> أو
+<strong>تصميم صفحة هبوط</strong>.
+</p>
+<p>
+أعمل على تهيئة الموقع من حيث العناوين، المحتوى، السرعة،
+وربط الموقع مع Google Search Console لضمان فهرسة صحيحة.
+</p>
+</section>
 
-  <a class="whatsFloat" href="https://wa.me/966507183296?text=مرحبا%20ابي%20خدمة" target="_blank">💬 واتساب</a>
+<section class="section" id="prices">
+<h2>الباقات</h2>
+<div class="cards">
 
-  <footer>© 2026 — نايف</footer>
+<div class="card">
+<h3>باقة الصفحة الواحدة</h3>
+<div class="price">499 ر.س</div>
+<p>صفحة واحدة احترافية<br>أساسيات SEO</p>
+<a class="btn" href="https://wa.me/966507183296?text=ابي%20باقة%20الصفحة%20الواحدة%20499">اطلب الآن</a>
+</div>
+
+<div class="card">
+<h3>الباقة الاحترافية</h3>
+<div class="price">999 ر.س</div>
+<p>موقع احترافي<br>SEO قوي</p>
+<a class="btn" href="https://wa.me/966507183296?text=ابي%20الباقة%20الاحترافية%20999">اطلب الآن</a>
+</div>
+
+<div class="card">
+<h3>الباقة المتكاملة</h3>
+<div class="price">1999 ر.س</div>
+<p>تصميم فخم<br>SEO متقدم + متابعة</p>
+<a class="btn" href="https://wa.me/966507183296?text=ابي%20الباقة%20المتكاملة%201999">اطلب الآن</a>
+</div>
+
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/966507183296">💬</a>
+
 </body>
-</html>
-
 </html>
 
 
